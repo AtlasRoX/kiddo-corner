@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 340 82% 52%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 340 82% 52%;
+    --radius: 1rem;
+
+    /* Custom color variables for dynamic theming */
+    --color-primary: #e91e63;
+    --color-secondary: #f3f4f6;
+    --color-accent: #f3f4f6;
+    --color-background: #ffffff;
+    --color-foreground: #0f172a;
+    --color-muted: #f3f4f6;
+    --color-muted-foreground: #6b7280;
+    --color-border: #e5e7eb;
+
+    /* RGB values for primary color */
+    --primary-rgb: 233, 30, 99;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 340 82% 52%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 340 82% 52%;
+
+    /* Custom color variables for dynamic theming in dark mode */
+    --color-primary: #e91e63;
+    --color-secondary: #1f2937;
+    --color-accent: #1f2937;
+    --color-background: #0f172a;
+    --color-foreground: #f9fafb;
+    --color-muted: #1f2937;
+    --color-muted-foreground: #9ca3af;
+    --color-border: #1f2937;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Apply Bangla font to all Bengali text */
+  :lang(bn),
+  .bn,
+  .bangla {
+    font-family: var(--font-hind-siliguri);
+  }
+}
+
+@layer components {
+  .bangla-text {
+    font-family: var(--font-hind-siliguri);
+  }
+
+  /* Dynamic color classes */
+  .bg-dynamic-primary {
+    background-color: var(--color-primary);
+  }
+
+  .text-dynamic-primary {
+    color: var(--color-primary);
+  }
+
+  .border-dynamic-primary {
+    border-color: var(--color-primary);
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+}
+
+/* Add support for Markdown content */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.prose h1 {
+  font-size: 1.5rem;
+}
+
+.prose h2 {
+  font-size: 1.25rem;
+}
+
+.prose h3 {
+  font-size: 1.125rem;
+}
+
+.prose p {
+  margin-bottom: 1em;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
+
+.prose a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.prose blockquote {
+  border-left: 3px solid hsl(var(--muted-foreground));
+  padding-left: 1em;
+  font-style: italic;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.prose code {
+  font-family: monospace;
+  background-color: hsl(var(--muted));
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+.prose pre {
+  background-color: hsl(var(--muted));
+  padding: 1em;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Ensure Bangla text in Markdown is properly rendered */
+.prose :lang(bn),
+.prose .bn,
+.prose .bangla {
+  font-family: var(--font-hind-siliguri);
+}
