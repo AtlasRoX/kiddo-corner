@@ -1,6 +1,10 @@
 import { supabase } from "@/lib/supabase"
 
 export interface FooterSection {
+  contact_items: boolean
+  social_links: boolean
+  type: string
+  links: boolean
   id: number
   section_name: string
   title: string

@@ -74,7 +74,7 @@ export function DynamicFooter() {
                 <TranslatedText text="Contact Us" />
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
-                <TranslatedText text="Email: contact@kiddocorner.com" />
+                <TranslatedText text="Email: kiddocornerbd@gmail.com" />
               </p>
             </div>
           </div>
@@ -138,7 +138,7 @@ export function DynamicFooter() {
           {sortedSections.map((section) => (
             <div key={section.id}>
               <h3 className="text-lg font-semibold mb-4 bangla-text">{section.title}</h3>
-              {section.type === "links" && section.links && (
+              {section.type === "links" && Array.isArray(section.links) && (
                 <ul className="space-y-2">
                   {section.links.map((link: any) => (
                     <li key={link.id}>
@@ -152,7 +152,7 @@ export function DynamicFooter() {
               {section.type === "text" && (
                 <p className="text-gray-600 dark:text-gray-400 bangla-text">{section.content}</p>
               )}
-              {section.type === "social" && section.social_links && (
+              {section.type === "social" && Array.isArray(section.social_links) && (
                 <div className="flex space-x-4">
                   {section.social_links.map((social: any) => (
                     <a
@@ -168,7 +168,7 @@ export function DynamicFooter() {
                   ))}
                 </div>
               )}
-              {section.type === "contact" && section.contact_items && (
+              {section.type === "contact" && Array.isArray(section.contact_items) && (
                 <ul className="space-y-2">
                   {section.contact_items.map((item: any) => (
                     <li key={item.id} className="flex items-center text-gray-600 dark:text-gray-400 bangla-text">

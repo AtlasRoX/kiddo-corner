@@ -48,7 +48,6 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
   const router = useRouter()
   const { toast } = useToast()
   const [hasVariations, setHasVariations] = useState(false)
-  const [activeTab, setActiveTab] = useState("description")
   const [youtubeVideoId, setYoutubeVideoId] = useState<string | null>(null)
 
   useEffect(() => {
@@ -370,7 +369,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
         {/* Product Tabs Section */}
         <div className="mt-12">
-          <Tabs defaultValue="description" value={activeTab} onValueChange={setActiveTab}>
+          <Tabs defaultValue="description">
             <TabsList className="w-full grid grid-cols-3">
               <TabsTrigger value="description" className="font-adorable">
                 <TranslatedText textKey="product.description" fallback="Description" />

@@ -77,7 +77,7 @@ export function ProductVariationSelector({ productId, onVariationChange }: Produ
 
       // If there are variations, select the default one
       if (variationData && variationData.length > 0) {
-        const defaultVariation = variationData.find((v) => v.is_default) || variationData[0]
+        const defaultVariation = variationData.find((v: { is_default: any }) => v.is_default) || variationData[0]
         setSelectedColorId(defaultVariation.color_id)
         setSelectedSizeId(defaultVariation.size_id)
         updateSelectedVariation(defaultVariation.color_id, defaultVariation.size_id, variationData)

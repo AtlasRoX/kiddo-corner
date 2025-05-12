@@ -98,15 +98,15 @@ export function Footer() {
               <TranslatedText textKey="footer.contactUs" fallback="Contact Us" />
             </h3>
             <address className="not-italic text-muted-foreground space-y-2">
-              <p className={language === "bn" ? "bangla-text" : ""}>123 Baby Street, Dhaka, Bangladesh</p>
+              <p className={language === "bn" ? "bangla-text" : ""}>44/3A lake circus road, Kalabagan, Dhaka</p>
               <p>
-                <a href="mailto:contact@kiddocorner.com" className="hover:text-primary transition-colors">
-                  contact@kiddocorner.com
+                <a href="mailto:kiddocornerbd@gmail.com" className="hover:text-primary transition-colors">
+                  kiddocornerbd@gmail.com
                 </a>
               </p>
               <p>
-                <a href="tel:+8801234567890" className="hover:text-primary transition-colors">
-                  +880 1234 567890
+                <a href="tel:+8801746748408" className="hover:text-primary transition-colors">
+                  +880 1746-748408
                 </a>
               </p>
             </address>
