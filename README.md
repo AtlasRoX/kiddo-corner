@@ -70,7 +70,7 @@ Follow these steps to get a local copy up and running.
 
 1.  **Clone the Repository**
     ```sh
-    git clone [https://github.com/your-username/kiddo-corner.git](https://github.com/your-username/kiddo-corner.git)
+    git clone https://github.com/your-username/kiddo-corner.git
     cd kiddo-corner
     ```
 
@@ -110,7 +110,7 @@ Start the development server:
 pnpm dev
 ````
 
-Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) to view the storefront. The admin panel is available at [http://localhost:3000/admin](https://www.google.com/search?q=http://localhost:3000/admin).
+Open [http://localhost:3000](http://localhost:3000) to view the storefront.
 
 -----
 
