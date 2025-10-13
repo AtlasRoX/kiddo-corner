@@ -70,7 +70,7 @@ Follow these steps to get a local copy up and running.
 
 1.  **Clone the Repository**
     ```sh
-    git clone https://github.com/your-username/kiddo-corner.git
+    git clone https://github.com/AtlasRoX/kiddo-corner.git
     cd kiddo-corner
     ```
 
